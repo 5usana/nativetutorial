@@ -1,17 +1,15 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
+import React, { useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
+  const [name, setName] = useState('Susana');
   return (
     <View style={styles.container}>
-      <View style={styles.header}>
-        <Text style={styles.boldtext}>HEADER</Text>
-      </View>
-      <View style={styles.body}>
-        <Text style={styles.boldText}>My first React Native tutorial. I think this is pretty neat!</Text>
-        <Text> Gibberish gibberish gibberish gibberish gibberish </Text>
-      </View>
+        <Text>My name is {name}</Text>
+        <Text></Text>
+        
+
       <StatusBar style="auto" />
     </View>
   );
@@ -24,16 +22,5 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  header: {
-    backgroundColor: 'coral',
-    padding: 20,
-  },
-  boldText: {
-    fontWeight: 'bold',
-  },
-  body: {
-    backgroundColor: 'yellow',
-    padding: 20,
-  }
 });
 
