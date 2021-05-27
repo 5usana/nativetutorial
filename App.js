@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, FlatList } from 'react-native';
+import { StyleSheet, Text, View, FlatList, TouchableOpacity } from 'react-native';
 
 export default function App() {
   const [people, setPeople] = useState([
@@ -17,6 +17,8 @@ export default function App() {
     <View style={styles.container}>
 
     <FlatList
+      numColumns={2}
+      keyExtractor={(item) => item.id}
       data={people}
       renderItem={({ item }) => (
         <Text style={styles.item}>{item.name}</Text>
@@ -52,6 +54,8 @@ const styles = StyleSheet.create({
     padding: 30,
     backgroundColor: 'coral',
     fontSize: 24,
+    marginHorizontal: 10,
+    marginTop: 24,
   }
 });
 
