@@ -4,12 +4,17 @@ import { StyleSheet, Text, View, Button } from 'react-native';
 
 export default function App() {
   const [name, setName] = useState('Susana');
+
+  const clickHandler = () => {
+    setName('you');
+  }
+
   return (
     <View style={styles.container}>
         <Text>My name is {name}</Text>
         <Text></Text>
         <View style={styles.buttonContainer}>
-          <Button title='update state'/>
+          <Button title='update state' onPress={clickHandler}/>
         </View>
 
       <StatusBar style="auto" />
