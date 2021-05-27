@@ -12,16 +12,21 @@ export default function App() {
     { name: 'bowser', id: '7' },
   ]);
 
+  const pressHandler = (id) => {
+    console.log(id);
+  }
 
   return (
     <View style={styles.container}>
-
     <FlatList
       numColumns={2}
       keyExtractor={(item) => item.id}
       data={people}
       renderItem={({ item }) => (
-        <Text style={styles.item}>{item.name}</Text>
+        <TouchableOpacity onPress={() => pressHandler(item.id)}>
+          <Text style={styles.item}>{item.name}</Text>
+
+        </TouchableOpacity>
         )}
        />
 
