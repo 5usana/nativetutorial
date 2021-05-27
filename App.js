@@ -18,9 +18,15 @@ export default function App() {
       <TextInput 
         style={styles.input}
         placeholder='e.g. John Doe'
-        onChangeText={() => setName()}
-        />
-      <TextInput>name: {name}, age: {age}</TextInput>
+        onChangeText={(val) => setName(val)} />
+
+      <Text>Enter age:</Text>
+      <TextInput 
+        style={styles.input}
+        placeholder='e.g. 37'
+        onChangeText={(val) => setAge(val)} />
+
+      <Text>name: {name}, age: {age}</Text>
 
 
         {/* <Text>My name is {name}</Text>
