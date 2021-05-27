@@ -1,24 +1,29 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, FlatList, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, } from 'react-native';
 
 export default function App() {
-  const [people, setPeople] = useState([
-    { name: 'shaun', id: '1' },
-    { name: 'yoshi', id: '2' },
-    { name: 'mario', id: '3' },
-    { name: 'luigi', id: '4' },
-    { name: 'peach', id: '5' },
-    { name: 'toad', id: '6' },
-    { name: 'bowser', id: '7' },
-  ]);
+  // const [people, setPeople] = useState([
+  //   { name: 'shaun', id: '1' },
+  //   { name: 'yoshi', id: '2' },
+  //   { name: 'mario', id: '3' },
+  //   { name: 'luigi', id: '4' },
+  //   { name: 'peach', id: '5' },
+  //   { name: 'toad', id: '6' },
+  //   { name: 'bowser', id: '7' },
+  // ]);
 
-  const pressHandler = (id) => {
-    console.log(id);
-  }
+  // const pressHandler = (id) => {
+  //   console.log(id);
+  //   setPeople((prevPeople) => {
+  //     return prevPeople.filter(person => person.id != id)
+  //   });
+  // }
 
   return (
     <View style={styles.container}>
-    <FlatList
+
+
+    {/* <FlatList
       numColumns={2}
       keyExtractor={(item) => item.id}
       data={people}
@@ -28,9 +33,7 @@ export default function App() {
 
         </TouchableOpacity>
         )}
-       />
-
-
+       /> */}
      {/* <ScrollView>
       { people.map(item => (
           <View key={item.key}>
@@ -39,8 +42,6 @@ export default function App() {
         )
       )}  
     </ScrollView>  */}
-      
-
     </View>
   );
 }
@@ -54,13 +55,13 @@ const styles = StyleSheet.create({
     // alignItems: 'center',
     // justifyContent: 'center',
   },
-  item: {
-    marginTop: 24,
-    padding: 30,
-    backgroundColor: 'coral',
-    fontSize: 24,
-    marginHorizontal: 10,
-    marginTop: 24,
-  }
+  // item: {
+  //   marginTop: 24,
+  //   padding: 30,
+  //   backgroundColor: 'coral',
+  //   fontSize: 24,
+  //   marginHorizontal: 10,
+  //   marginTop: 24,
+  // }
 });
 
