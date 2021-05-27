@@ -16,7 +16,12 @@ export default function App() {
   return (
     <View style={styles.container}>
 
-
+    <FlatList
+      data={people}
+      renderItem={({ item }) => (
+        <Text style={styles.item}>{item.name}</Text>
+        )}
+       />
 
 
      {/* <ScrollView>
