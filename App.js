@@ -1,23 +1,30 @@
-import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, Button } from 'react-native';
+import { StyleSheet, Text, View, TextInput } from 'react-native';
 
 export default function App() {
-  const [name, setName] = useState('Susana');
+  const [people, setPeople] = useState([
+    { name: 'shaun', key: '1' },
+    { name: 'yoshi', key: '2' },
+    { name: 'mario', key: '3' },
+    { name: 'luigi', key: '4' },
+    { name: 'peach', key: '5' },
+    { name: 'toad', key: '6' },
+    { name: 'bowser', key: '7' },
+  ]);
 
-  const clickHandler = () => {
-    setName('you');
-  }
 
   return (
     <View style={styles.container}>
-        <Text>My name is {name}</Text>
-        <Text></Text>
-        <View style={styles.buttonContainer}>
-          <Button title='update state' onPress={clickHandler}/>
+      
+    { people.map((item) => {
+      return (
+        <View>
+          <Text>{item.name}</Text>
         </View>
+      )
+    }) }  
+      
 
-      <StatusBar style="auto" />
     </View>
   );
 }
@@ -26,11 +33,10 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  buttonContainer: {
-    marginTop:20
+    paddingTop: 40,
+    paddingHorizontal: 20
+    // alignItems: 'center',
+    // justifyContent: 'center',
   },
 });
 
