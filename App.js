@@ -14,8 +14,13 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-
-      <Text>name: {name}, age: {age}</Text>
+      <Text>Enter name:</Text>
+      <TextInput 
+        style={styles.input}
+        placeholder='e.g. John Doe'
+        onChangeText={() => setName()}
+        />
+      <TextInput>name: {name}, age: {age}</TextInput>
 
 
         {/* <Text>My name is {name}</Text>
@@ -35,6 +40,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  input: {
+    borderWidth: 1,
+    borderColor: '#777',
+    padding: 8,
+    margin: 10,
+    width: 200,
+  }
   // buttonContainer: {
   //   marginTop:20
   // },
