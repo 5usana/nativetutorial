@@ -4,15 +4,16 @@ import { StyleSheet, Text, View, Button } from 'react-native';
 
 export default function App() {
   const [name, setName] = useState('Susana');
+  const [person, setPerson] = useState({ name: 'mario', age: 40 });
 
   const clickHandler = () => {
-    setName('you');
+    setName('Charlie');
   }
 
   return (
     <View style={styles.container}>
         <Text>My name is {name}</Text>
-        <Text></Text>
+        <Text>His name is {person.name} and his name is {person.age}</Text>
         <View style={styles.buttonContainer}>
           <Button title='update state' onPress={clickHandler}/>
         </View>
