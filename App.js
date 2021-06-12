@@ -12,13 +12,15 @@ const [todos, setTodos] = useState([
 
   return (
     <View style={styles.container}>
-      2
       {/* header */}
       <View style={styles.content}>
         {/* to form */}
         <View style={styles.list}>
           <FlatList 
-          
+            data={todos}
+            renderItem={({ item }) => (
+              <Text>{item.text}</Text> 
+            )}
           />
         </View>
     </View>
@@ -31,6 +33,12 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
   },
+  content: {
+    padding: 40,
+  },
+  list: {
+    marginTop: 20,
+  }
  
 });
 
