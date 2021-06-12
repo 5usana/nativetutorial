@@ -1,14 +1,23 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity } from 'react-native';
 
-export default function todoItem() {
+export default function TodoItem({ item }) {
     return(
-        <View>
-            <Text></Text>
-        </View>
+        <TouchableOpacity>
+            <Text>{item.text}</Text>
+        </TouchableOpacity>
     )
+    
 }
 
-const styles= StyleSheet.create({
-  
-});
+const styles = StyleSheet.create ({
+    item: {
+        padding: 16,
+        marginTop: 16,
+        borderColor: '#bbb',
+        borderWidth: 1,
+        borderStyle: 'dashed',
+        borderRadius: 10,
+    }
+})
+
