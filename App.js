@@ -20,7 +20,7 @@ const [todos, setTodos] = useState([
           <FlatList 
             data={todos}
             renderItem={({ item }) => (
-              <Text>{item.text}</Text> 
+             <TodoItem />
             )}
           />
         </View>
