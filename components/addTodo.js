@@ -1,19 +1,23 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, TextInput, Button } from 'react-native';
+import { StyleSheet, View, TextInput, text, Button } from 'react-native';
 
 export default function AddTodo() {
     const [text, setText] = useState('');
 
+    // function to interact with state
     const changeHandler = (val) => {
         setText(val);
-    }
+    };
+
     return(
         <View>
             <TextInput 
                 style={styles.input}
                 placeholder='new todo...'
                 onChangeText={changeHandler}
+                value={text}
             />
+            <Button onPress={() => console.log(text)} title='add todo' color='coral' />
         </View>
     )
 }
@@ -25,5 +29,5 @@ const styles = StyleSheet.create({
         paddingVertical: 6,
         borderBottomWidth: 1,
         borderBottomColor: '#ddd'
-    }
-})
+    },
+});
